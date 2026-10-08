@@ -13,7 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 public class RestrictedTargetService {
     private final TargetsDeviceRepository repository;
 
-    public void setDelayTime(String device_id, int delay) {
+    public void targetDeviceDelay(String device_id, int delay) {
         TargetPlayer player = repository.findByDevice_id(device_id).orElseThrow(() -> new TargetNotFoundException(device_id));
         player.setDelay(delay);
         repository.save(player);

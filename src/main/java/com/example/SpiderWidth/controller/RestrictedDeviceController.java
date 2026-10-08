@@ -27,7 +27,7 @@ public class RestrictedDeviceController {
 
     @PutMapping("/time")
     public ResponseEntity<String> delayTimer(@RequestParam String device_id,@RequestHeader int delay) {
-        targetService.setDelayTime(device_id,delay);
+        targetService.targetDeviceDelay(device_id,delay);
         return new ResponseEntity<>(device_id+" Targets Time Updated to "+delay, HttpStatus.OK);
     }
 }
