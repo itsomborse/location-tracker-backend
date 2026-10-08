@@ -52,7 +52,7 @@ public class SpringSecurity {
 
     @Bean
     public UserDetailsManager userDetailsManager() {
-        UserDetails userDetails1 = User.withUsername("Om").password(encoder.encode("Hope")).roles("ADMIN").build();
+        UserDetails userDetails1 = User.withUsername("ItsOmborse").password(encoder.encode("ItsOmborse")).roles("ADMIN").build();
         return new InMemoryUserDetailsManager(userDetails1);
     }
 
